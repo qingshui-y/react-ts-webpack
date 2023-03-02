@@ -32,6 +32,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.35.0",
     "eslint-plugin-react": "^7.32.2",
     "friendly-errors-webpack-plugin": "^1.7.0",
@@ -64,5 +65,10 @@
     "src/**/*.{ts,tsx}": [
       "npm run eslint"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
 }
