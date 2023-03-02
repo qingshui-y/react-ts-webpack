@@ -9,6 +9,7 @@
     "analy": "cross-env NODE_ENV=production webpack -c build/webpack.analy.js",
     "eslint": "eslint",
     "pre-check": "tsc && npx lint-staged",
+    "stylelint": "stylelint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -52,6 +53,13 @@
     "react-router-dom": "^6.8.2",
     "speed-measure-webpack-plugin": "^1.5.0",
     "style-loader": "^3.3.1",
+    "stylelint": "^15.2.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recess-order": "^4.0.0",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "stylelint-less": "^1.0.6",
+    "stylelint-order": "^6.0.2",
     "terser-webpack-plugin": "^5.3.6",
     "thread-loader": "^3.0.4",
     "typescript": "^4.9.5",
@@ -64,6 +72,9 @@
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "npm run eslint"
+    ],
+    "src/**/*.{css,less,scss}": [
+      "npm run stylelint"
     ]
   },
   "config": {
