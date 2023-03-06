@@ -15,13 +15,18 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks'],
   rules: {
-    '@typescript-eslint/no-non-null-assertion': 'off'
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    // 检查 Hooks 的使用规则
+    'react-hooks/rules-of-hooks': 'error',
+    // 检查依赖项的声明
+    'react-hooks/exhaustive-deps': 'warn'
   },
   settings: {
     react: {
       version: 'detect'
     }
   }
-}
+};

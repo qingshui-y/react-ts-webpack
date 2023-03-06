@@ -5,7 +5,7 @@ module.exports = {
     'stylelint-config-recess-order', // 配置stylelint css属性书写顺序插件
     'stylelint-config-standard-scss' // 配置stylelint scss插件
   ],
-  plugins: ['stylelint-less'],
+  plugins: ['stylelint-order', 'stylelint-less'],
   rules: {
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': null,
