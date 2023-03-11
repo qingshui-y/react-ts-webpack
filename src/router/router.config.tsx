@@ -12,6 +12,7 @@ const routerConfig = [
     path: '/',
     element: <BasicLayout />,
     children: [
+      { path: '', element: <Navigate to='login' /> }, // Redirect
       {
         path: 'list',
         element: (
@@ -20,8 +21,7 @@ const routerConfig = [
           </Suspense>
         )
       },
-      { path: 'admin', element: <Admin /> },
-      { path: '*', element: <Navigate to='login' /> } // Redirect
+      { path: 'admin', element: <Admin /> }
     ]
   }
 ];
